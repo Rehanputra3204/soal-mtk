@@ -1,0 +1,82 @@
+Berikut adalah konten file HTML yang bisa kamu salin dan simpan sebagai file bernama index.html:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hacker Math Hunt</title>
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: #33ff33;
+      font-family: 'Courier New', Courier, monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .terminal {
+      border: 1px solid #33ff33;
+      padding: 20px;
+      width: 80%;
+      max-width: 500px;
+      text-align: center;
+    }
+    input[type="text"] {
+      background: black;
+      color: #33ff33;
+      border: 1px solid #33ff33;
+      padding: 8px;
+      width: 100%;
+      margin-top: 10px;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #33ff33;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+    }
+    .reward {
+      display: none;
+      margin-top: 20px;
+      padding: 15px;
+      border: 1px solid #33ff33;
+    }
+    a {
+      color: #33ff33;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="terminal">
+    <h2>HACKER MATH HUNT</h2>
+    <p>Selesaikan soal matematika berikut untuk membuka hadiah:</p>
+    <h3>What is 7 + 3 * 2?</h3>
+    <input type="text" id="answerInput" placeholder="Masukkan jawaban...">
+    <button onclick="checkAnswer()">Submit</button>
+    <div id="reward" class="reward">
+      <strong>Access granted!</strong><br>
+      Your secret reward: <a href="https://link.dana.id/danakaget?c=sxja9zlrl&r=gG6E86&orderId=20250416101214573315010300166662418050512" target="_blank">Click here</a>
+    </div>
+  </div>
+
+  <script>
+    function checkAnswer() {
+      // Mengambil nilai dari input dan mengubahnya menjadi integer
+      const inputVal = parseInt(document.getElementById('answerInput').value.trim(), 10);
+      // Jawaban benar untuk soal 7 + 3 * 2 adalah 13 (sesuai aturan operasi)
+      if (inputVal === 13) {
+        document.getElementById('reward').style.display = 'block';
+      } else {
+        alert('Jawaban salah. Silakan coba lagi.');
+      }
+    }
+  </script>
+</body>
+</html>
